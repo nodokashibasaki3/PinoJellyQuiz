@@ -1,0 +1,111 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #D5C1EB; /* Soft purple background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.window {
+  background: #e20587; /* Light pink for window background */
+  border: 3px outset #FF7FB0; /* Bright pink for window 3D border effect */
+  /*outline: 2px solid black; Outer black border */
+  width: 90vw; /* Responsive width */
+  max-width: 410px; /* Maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensures nothing spills outside the border */
+}
+
+.window-body {
+  padding: 10px;
+  background: #FFF; /* White background for the content area */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#colorPercentageChart {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.date-issued-section {
+  margin-left: auto; /* Pushes the date to the right */
+  padding-right: 10px; /* Ensures some spacing from the edge */
+  font-size: 0.8em; /* Adjust size as needed */
+}
+
+.title-bar {
+  background: #FF7FB0; /* Bright pink for the title bar */
+  color: white;
+  padding: 0.5vw; /* Responsive padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw; /* Responsive font size */
+  word-spacing: 1vw;
+}
+
+.title-text {
+  font-weight: bold;
+}
+
+.menu-bar {
+  background: #e20587; /* Light pink for the menu bar */
+  color: black;
+  padding: 1vw 1.5vw; /* Responsive padding */
+  display: flex;
+  justify-content: space-between; /* Changed to space-between to push children to edges */
+  align-items: center;
+  font-size: 1vw; /* Responsive font size */
+  position: relative; /* Added to position the controls absolutely within */
+}
+
+.menu-bar-controls {
+  display: flex;
+}
+
+.menu-bar-controls button {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-left: 0.5vw;
+  border: none;
+  background: #FF7FB0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw; /* Adjust font size as needed */
+  cursor: pointer;
+}
+
+.minimize, .maximize, .close {
+  user-select: none; /* Prevent text selection */
+}
+
+/* Optionally adjust specific styles for each button */
+.minimize {
+  font-size: 0.5vw; /* Make 'x' larger */
+}
+
+.window-body {
+  padding: 2vw; /* Responsive padding */
+  background: #FFF; /* White background for the content area */
+  font-size: 1vw; /* Responsive font size */
+}
+
+@media (max-width: 600px) {
+  .title-bar, .menu-bar, .window-body {
+    font-size: 12px; /* Minimum font size */
+  }
+
+  .title-bar-controls button {
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+  }
+}

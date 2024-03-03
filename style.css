@@ -1,0 +1,164 @@
+/* Color Palette */
+:root {
+    --magenta-pantone: #FF7FB0;
+    --chestnut: #8A4D39ff;
+    --baby-powder: #F4F5EFff;
+    --arylide-yellow: #EADA4Dff;
+    --thulian-pink: #DC5A93ff;
+    --ultra-violet: #6E4B94ff;
+}
+
+@font-face {
+    font-family: 'Bubble';
+    src: url('bubble.ttf') format('truetype'); /* Adjust the path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--magenta-pantone); /* Updated background color to yellow */
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'CocoBike-Regular', sans-serif; /* Apply CocoBike-Regular font */
+    font-size: 36px; /* Adjust font size as needed */
+    text-shadow: -2px -2px 0 var(--chestnut), 2px -2px 0 var(--chestnut), -2px 2px 0 var(--chestnut), 2px 2px 0 var(--chestnut); /* Add stroke effect */
+}
+
+h3 {
+    color: #444;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+
+.header {
+    text-align: center; /* Center the title image */
+    padding: 20px; /* Add some spacing around the image */
+}
+
+.title-image {
+    max-width: 40%; /* Ensure the image is responsive and fits within its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.question-group {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.question p {
+    font-weight: bold;
+    color: #555;
+}
+
+.question {
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffe46b;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffe46b;
+    cursor: pointer;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px; /* Add padding to prevent labels from overflowing */
+}
+
+.labels span {
+    font-size: 1.0vw; /* Adjust based on your preference */
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+    flex: 1; /* Ensures each label flexes to fill available space */
+}
+
+.labels span:first-child {
+    left: 0;
+    transform: translateX(-25%);
+}
+
+.labels span:last-child {
+    right: 0;
+    transform: translateX(30%);
+}
+
+.labels span:nth-child(2) {
+    left: 25%;
+    transform: translateX(-25%);
+}
+
+.labels span:nth-child(3) {
+    left: 50%;
+}
+
+.labels span:nth-child(4) {
+    left: 75%;
+    transform: translateX(25%);
+}
+
+button {
+    background-color: #804500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button:hover {
+    background-color: #8A4D39ff;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personality Test Results</title>
+    <link rel="stylesheet" href="results.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="window license-plate">
+        <div class="menu-bar">
+            <div class="menu-bar-title"> </div> 
+            <div class="menu-bar-controls">
+                <button class="minimize">—</button> <!-- A dash for minimize -->
+                <button class="maximize">❐</button> <!-- A longer rectangle for maximize -->
+                <button class="close">✕</button> <!-- An 'x' for close -->
+            </div>            
+        </div>
+        <div class="title-bar">
+            <span class="title-text"><u>F</u>ile    <u>E</u>dit    <u>F</u>ont    <u>S</u>earch</span>
+        </div>
+        <div class="window-body">
+            
+            <div class="content-section">
+                <div class="result-section">
+                    <h2 class="personality-result">You are <u></n><span id="personalityTrait"></span></u>.</h2>
+                    <p>The analytics below represent the composition of your characteristics in percentages.</p>
+                    <p class="color-percentage">Empathethy: <span id="bluePercentage"></span>%</p>
+                    <p class="color-percentage">Spontaneousness: <span id="orangePercentage"></span>%</p>
+                    <p class="color-percentage">Analytical: <span id="greenPercentage"></span>%</p>
+                    <p class="color-percentage">Organized-ness: <span id="goldPercentage"></span>%</p>
+                </div>
+
+                <div style="width: 50vw; height: 50vh;">
+                    <canvas id="colorPercentageChart"></canvas>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>
