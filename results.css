@@ -8,6 +8,23 @@ body {
   margin: 0;
 }
 
+.windows-container {
+  display: flex; /* Aligns children (windows) horizontally */
+  justify-content: center; /* Center the windows horizontally in the container */
+  align-items: flex-start; /* Aligns items at the start of the cross axis */
+  gap: 20px; /* Space between the windows */
+  padding: 20px; /* Space around the container's content */
+  flex-wrap: wrap; /* Allow the windows to wrap on smaller screens */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.window, .secondary-window, .third-window {
+  position: absolute; /* Absolute positioning relative to their closest positioned ancestor */
+  z-index: 1; /* Base z-index */
+}
+
 .window {
   background: #e20587; /* Light pink for window background */
   border: 3px outset #FF7FB0; /* Bright pink for window 3D border effect */
@@ -23,6 +40,19 @@ body {
   background: #FFF; /* White background for the content area */
   display: flex;
   flex-direction: column;
+}
+
+.secondary-window {
+  
+}
+
+.tertiary-window{
+  border: 3px outset #8B4513 !important; /* A shade of brown */
+}
+
+.title-bar-brown {
+  background-color: #8B4513 !important; /* A shade of brown */
+  color: white !important; /* Adjust text color as needed */
 }
 
 .content-section {
@@ -88,15 +118,11 @@ body {
   user-select: none; /* Prevent text selection */
 }
 
-/* Optionally adjust specific styles for each button */
-.minimize {
-  font-size: 0.5vw; /* Make 'x' larger */
-}
-
-.window-body {
-  padding: 2vw; /* Responsive padding */
-  background: #FFF; /* White background for the content area */
-  font-size: 1vw; /* Responsive font size */
+#personalityTraitImage {
+  max-width: 50%; /* Adjust the size of the image */
+  display: block; /* Allows margin: auto to center the image */
+  margin: 20px auto; /* Adds top and bottom spacing, and centers horizontally */
+  height: auto; /* Maintains aspect ratio */
 }
 
 @media (max-width: 600px) {
