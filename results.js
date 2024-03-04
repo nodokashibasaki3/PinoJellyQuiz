@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Assuming you already have the color percentages
-    const bluePercentage = 25; // Example percentage
-    const orangePercentage = 25;
-    const greenPercentage = 25;
-    const goldPercentage = 25;
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const personalityTrait = urlParams.get('closestTrait');
+    const bluePercentage = urlParams.get('blue');
+    const orangePercentage = urlParams.get('orange');
+    const greenPercentage = urlParams.get('green');
+    const goldPercentage = urlParams.get('gold');
+
+    // Update the DOM elements with the results
+    document.getElementById('personalityTrait').textContent = personalityTrait;
+    document.getElementById('bluePercentage').textContent = bluePercentage;
+    document.getElementById('orangePercentage').textContent = orangePercentage;
+    document.getElementById('greenPercentage').textContent = greenPercentage;
+    document.getElementById('goldPercentage').textContent = goldPercentage;
 
     const ctx = document.getElementById('colorPercentageChart').getContext('2d');
     const colorPercentageChart = new Chart(ctx, {
